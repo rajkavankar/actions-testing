@@ -12,3 +12,9 @@ jobs:
         run: echo "Hello users"
       - name: Say hello to username
         run: echo "Hello $USER"
+
+  details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get versions of docker and node
+        run: docker --version && node --version && npm --version
