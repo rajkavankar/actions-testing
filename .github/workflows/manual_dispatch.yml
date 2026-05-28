@@ -1,0 +1,26 @@
+name: "Manual dispatch"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Clone the project"
+        run: echo "Checkout project"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "build the project"
+        run: echo "Build project"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Run tests"
+        run: echo "Run test cases"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Deploy project"
+        run: echo "Deploy the project"
