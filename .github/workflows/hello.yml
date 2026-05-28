@@ -2,9 +2,9 @@ name: say-hello
 
 on:
   push:
-  branches: [main]
-  paths:
-    - "**.html"
+    branches: [main]
+    paths:
+      - "**.html"
 
 jobs:
   greet:
