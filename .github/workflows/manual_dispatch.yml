@@ -10,16 +10,19 @@ jobs:
       - name: "Clone the project"
         run: echo "Checkout project"
   build:
+    needs: [checkout]
     runs-on: ubuntu-latest
     steps:
       - name: "build the project"
         run: echo "Build project"
   test:
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: "Run tests"
         run: echo "Run test cases"
   deploy:
+    needs: [test]
     runs-on: ubuntu-latest
     steps:
       - name: "Deploy project"
